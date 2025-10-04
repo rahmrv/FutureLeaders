@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Future Leader — GreenGuard (Demo)</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --sand:#F5EDE6; /* warm beige */
+      --deep:#0E4B3A; /* deep green */
+      --mint:#CFEBD8; /* soft mint */
+      --sun:#F6AF3C; /* sunlight orange */
+      --muted:#6B6B6B;
+      --card:#FFFFFF;
+      --glass: rgba(255,255,255,0.65);
+      font-family: 'Inter', system-ui, -apple-system, "Segoe UI", Roboto, 'Helvetica Neue', Arial;
+      color:var(--deep);
+    }
+    *{box-sizing:border-box}
+    body{margin:0;background:linear-gradient(180deg,var(--sand),#fff);min-height:100vh;}
+
+    header{max-width:1100px;margin:28px auto;padding:18px;display:flex;align-items:center;gap:16px}
+    .brand{display:flex;align-items:center;gap:14px}
+    .logo{width:64px;height:64px;border-radius:14px;background:linear-gradient(135deg,var(--deep),var(--mint));display:flex;align-items:center;justify-content:center;color:white;font-weight:800;box-shadow:0 6px 18px rgba(14,75,58,0.14)}
+    h1.site{margin:0;font-size:20px}
+    p.tag{margin:0;color:var(--muted);font-size:13px}
+
+    nav{margin-left:auto}
+    nav a{margin-left:14px;text-decoration:none;color:var(--deep);font-weight:600}
+
+    .hero{max-width:1100px;margin:10px auto;padding:34px 18px;display:grid;grid-template-columns:1fr 420px;gap:28px;align-items:center}
+    .card{background:var(--card);border-radius:18px;padding:24px;box-shadow:0 8px 30px rgba(15,75,58,0.06)}
+
+    .eyebrow{display:inline-block;background:var(--mint);color:var(--deep);padding:6px 10px;border-radius:12px;font-size:12px;font-weight:600}
+    h2{font-size:34px;margin:12px 0 6px}
+    p.lead{margin:0;color:var(--muted);line-height:1.6}
+    .actions{margin-top:18px;display:flex;gap:12px}
+    .btn{padding:10px 14px;border-radius:12px;border:none;cursor:pointer;font-weight:700}
+    .btn.primary{background:linear-gradient(90deg,var(--deep),#0b3f31);color:white}
+    .btn.ghost{background:transparent;border:1px solid rgba(14,75,58,0.08);color:var(--deep)}
+
+    .robot-illustration{display:flex;flex-direction:column;align-items:center;gap:12px}
+    .robot-illustration svg{width:320px;height:auto}
+    .meta{display:flex;gap:10px;margin-top:8px}
+    .pill{background:var(--glass);padding:8px 10px;border-radius:999px;font-weight:600;color:var(--deep);font-size:13px}
+
+    .features{max-width:1100px;margin:20px auto;display:grid;grid-template-columns:repeat(3,1fr);gap:20px;padding:0 18px}
+    .feature{background:linear-gradient(180deg,rgba(255,255,255,0.9),#fff);padding:18px;border-radius:12px}
+    .feature h4{margin:6px 0;color:var(--deep)}
+    .feature p{margin:0;color:var(--muted);font-size:14px}
+
+    .about{max-width:1100px;margin:26px auto;padding:18px}
+    .about-grid{display:grid;grid-template-columns:1fr 360px;gap:20px}
+
+    footer{max-width:1100px;margin:34px auto;padding:18px;color:var(--muted);text-align:center}
+
+    /* subtle animation */
+    .float{animation:float 6s ease-in-out infinite}
+    @keyframes float{0%{transform:translateY(0)}50%{transform:translateY(-8px)}100%{transform:translateY(0)}}
+
+    /* responsive */
+    @media (max-width:900px){
+      .hero{grid-template-columns:1fr;}
+      .features{grid-template-columns:1fr}
+      .about-grid{grid-template-columns:1fr}
+      nav{display:none}
+      .robot-illustration svg{width:100%}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="brand">
+      <div class="logo">FL</div>
+      <div>
+        <h1 class="site">Future Leader</h1>
+        <p class="tag">Robotics • AI • UAE — Helping plants survive & thrive</p>
+      </div>
+    </div>
+    <nav>
+      <a href="#how">How</a>
+      <a href="#work">Work</a>
+      <a href="#team">Team</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="card">
+        <span class="eyebrow">GreenGuard — Field Prototype</span>
+        <h2>Robots that listen to plants. Designed for the UAE.</h2>
+        <p class="lead">Future Leader builds mobile robots with smart sensors and AI to monitor soil moisture, temperature, and plant health — providing clear, human-friendly recommendations to help crops survive in sandy soil and extreme heat.</p>
+
+        <div class="actions">
+          <button class="btn primary">View Project</button>
+          <button class="btn ghost">Download Summary</button>
+        </div>
+
+        <div class="meta">
+          <span class="pill">Prototype • Student Team</span>
+          <span class="pill">Dubai (Simulated)</span>
+          <span class="pill">Low-water strategies</span>
+        </div>
+      </div>
+
+      <aside class="card robot-illustration">
+        <!-- Decorative robot SVG - friendly and handcrafted look -->
+        <svg viewBox="0 0 360 300" xmlns="http://www.w3.org/2000/svg" class="float" aria-hidden>
+          <defs>
+            <linearGradient id="g1" x1="0" x2="1" y1="0" y2="1">
+              <stop offset="0" stop-color="#CFEBD8" />
+              <stop offset="1" stop-color="#F6AF3C" />
+            </linearGradient>
+          </defs>
+          <rect x="28" y="120" width="304" height="140" rx="18" fill="#fff" stroke="#EFE7DE" />
+          <rect x="52" y="64" width="120" height="86" rx="14" fill="#E5F7EE" stroke="#DCEFE6" />
+          <circle cx="112" cy="106" r="8" fill="#0E4B3A" />
+          <rect x="192" y="74" width="96" height="96" rx="12" fill="url(#g1)" />
+          <circle cx="240" cy="122" r="10" fill="#fff" opacity="0.95" />
+          <path d="M84 220c20-18 60-18 80 0v18H84v-18z" fill="#F4EDE6" />
+          <g transform="translate(40,186)">
+            <rect x="0" y="0" width="28" height="8" rx="4" fill="#0E4B3A" />
+            <rect x="52" y="0" width="28" height="8" rx="4" fill="#0E4B3A" />
+          </g>
+        </svg>
+        <div style="text-align:center">
+          <strong style="color:var(--deep)">Prototype Rover</strong>
+          <div style="color:var(--muted);font-size:13px">Camera • Moisture probe • Onboard microcontroller</div>
+        </div>
+      </aside>
+    </section>
+
+    <section class="features" id="how">
+      <div class="feature card">
+        <h4>Sense</h4>
+        <p>High-quality soil probes + RGB camera capture moisture, pH, temperature and visible stress signals.</p>
+      </div>
+      <div class="feature card">
+        <h4>Analyze</h4>
+        <p>Lightweight onboard AI interprets sensor signals into simple guidance — no complicated outputs, just clear actions.</p>
+      </div>
+      <div class="feature card">
+        <h4>Act</h4>
+        <p>Robots can suggest targeted irrigation, flag disease risk, or send a human-readable report to caretakers.</p>
+      </div>
+    </section>
+
+    <section class="about" id="work">
+      <div class="about-grid">
+        <div class="card">
+          <h3 style="margin-top:0">Built for UAE conditions</h3>
+          <p style="color:var(--muted)">Sandy soil and heat require adaptive strategies. Our approach focuses on low-water irrigation, soil amendments, and scheduling based on plant stress rather than a fixed timer. The robots are designed to be simple, rugged, and easy to use by farmers and community gardens.</p>
+
+          <ul style="margin-top:14px;color:var(--muted);line-height:1.7">
+            <li><strong>Localized sensing</strong> — per-plant moisture, not just a single sensor.</li>
+            <li><strong>Human-first recommendations</strong> — plain language alerts.</li>
+            <li><strong>Data privacy</strong> — telemetry stored per project; owners control sharing.</li>
+          </ul>
+
+          <div style="margin-top:14px">
+            <button class="btn primary">Request Demo</button>
+            <button class="btn ghost" style="margin-left:8px">Read Technical Notes</button>
+          </div>
+        </div>
+
+        <div class="card">
+          <h4 style="margin-top:0">Quick snapshot</h4>
+          <div style="display:flex;flex-direction:column;gap:8px;margin-top:8px">
+            <div style="display:flex;justify-content:space-between;align-items:center"><span style="color:var(--muted)">Status</span><strong style="color:var(--deep)">Prototype</strong></div>
+            <div style="display:flex;justify-content:space-between;align-items:center"><span style="color:var(--muted)">Battery</span><strong>82%</strong></div>
+            <div style="display:flex;justify-content:space-between;align-items:center"><span style="color:var(--muted)">Last scan</span><strong>10s ago</strong></div>
+            <div style="display:flex;justify-content:space-between;align-items:center"><span style="color:var(--muted)">Location</span><strong>Dubai (testbed)</strong></div>
+          </div>
+
+          <div style="margin-top:18px">
+            <h4 style="margin:0">Why it feels human</h4>
+            <p style="color:var(--muted);font-size:13px;margin-top:6px">Typeface, spacing, and carefully chosen colors give a hand-crafted look. The language is simple and warm — written as if a teammate explained it to a neighbor.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section style="max-width:1100px;margin:18px auto;padding:0 18px" id="team">
+      <div class="card">
+        <h3 style="margin-top:0">Team — Future Leader</h3>
+        <p style="color:var(--muted)">A small multidisciplinary student team building practical robots and simple AI to help local gardens and farms succeed in extreme climates.</p>
+
+        <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:12px">
+          <div style="padding:12px;border-radius:10px;background:linear-gradient(180deg,#fff,#FBFBFB)">
+            <strong>Amina</strong>
+            <div style="color:var(--muted);font-size:13px">AI & Vision</div>
+          </div>
+          <div style="padding:12px;border-radius:10px;background:linear-gradient(180deg,#fff,#FBFBFB)">
+            <strong>Saif</strong>
+            <div style="color:var(--muted);font-size:13px">Robotics</div>
+          </div>
+          <div style="padding:12px;border-radius:10px;background:linear-gradient(180deg,#fff,#FBFBFB)">
+            <strong>Laila</strong>
+            <div style="color:var(--muted);font-size:13px">IoT & Sensors</div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div style="max-width:1100px;margin:0 auto;padding:18px;color:var(--muted)">Made with care by <strong>Future Leader</strong> • Demo prototype for Arab AI & IoT competition</div>
+  </footer>
+</body>
+</html>
